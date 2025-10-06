@@ -1,5 +1,5 @@
 {
-  "name": "capacitor-thermal-printer",
+  "name": "@aybinv7/capacitor-thermal-printer",
   "version": "0.2.5",
   "description": "High-speed, reliable bluetooth ESC thermal printer and encoder Capacitor plugin.",
   "main": "dist/plugin.cjs.js",
