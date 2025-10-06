@@ -47,7 +47,7 @@
     "prettier": "prettier \"src/**/*.{css,html,ts,js}\" \"android/src/main/**/*.java\" --plugin=./node_modules/prettier-plugin-java/dist/index.js",
     "swiftlint": "node-swiftlint",
     "docs": "npx typedoc",
-    "build": "npm run clean && npm run docs && tsc && rollup -c rollup.config.js",
+    "build": "npm run clean && tsc && rollup -c rollup.config.js",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build"
