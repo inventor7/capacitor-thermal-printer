@@ -154,12 +154,18 @@ public class CapacitorThermalPrinterPlugin extends Plugin implements PrinterObse
 
     @Override
     protected void handleOnDestroy() {
-        super.handleOnDestroy();
 
-        getContext().unregisterReceiver(mBluetoothReceiver);
-        mRegistered = false;
+        try {
+            super.handleOnDestroy();
 
-        PrinterObserverManager.getInstance().remove(this);
+            getContext().unregisterReceiver(mBluetoothReceiver);
+            mRegistered = false;
+
+            PrinterObserverManager.getInstance().remove(this);
+        } catch (Exception e) {
+            Logger.info("OnDestroy : mBluetoothReceiver was not registered Yet" , e + "");
+        }
+
     }
 
     @PluginMethod
